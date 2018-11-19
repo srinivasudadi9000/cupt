@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">cupt</string>
+    <string name="login_hint">Mobile/Email/Aadhar no</string>
+    <string name="password_hint">Password</string>
+    <string name="forgotpassword">forgot password?</string>
+    <string name="username" />
+    <string name="terms">I Agree to The Terms and Conditions</string>
+    <string name="checkedstate">START</string>
+    <string name="uncheckedstate">STOP</string>
+
+</resources>
