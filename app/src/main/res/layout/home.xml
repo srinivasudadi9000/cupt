@@ -18,12 +18,11 @@
             android:orientation="vertical">
 
             <ImageView
-                android:src="@drawable/userprofile"
-                android:layout_marginTop="10dp"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                 />
+                android:layout_marginTop="10dp"
+                android:src="@drawable/userprofile" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -65,6 +64,8 @@
                     android:layout_weight="1"
                     android:alpha=".7"
                     android:background="@drawable/toogle_switch"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:padding="5dp">
 
                     <LinearLayout
@@ -108,6 +109,8 @@
                     android:layout_weight="1"
                     android:alpha=".7"
                     android:background="@drawable/toogle_switch"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:padding="5dp">
 
                     <LinearLayout
@@ -146,6 +149,8 @@
                     android:layout_weight="1"
                     android:alpha=".7"
                     android:background="@drawable/toogle_switch"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:padding="5dp">
 
                     <LinearLayout
@@ -193,6 +198,8 @@
                     android:layout_weight="1"
                     android:alpha=".7"
                     android:background="@drawable/toogle_switch"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:padding="5dp">
 
                     <LinearLayout
@@ -230,6 +237,8 @@
                     android:layout_weight="1"
                     android:alpha=".7"
                     android:background="@drawable/toogle_switch"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:padding="5dp">
 
                     <LinearLayout
@@ -267,6 +276,8 @@
                     android:layout_weight="1"
                     android:alpha=".7"
                     android:background="@drawable/toogle_switch"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:padding="5dp">
 
                     <LinearLayout
@@ -315,6 +326,8 @@
                     android:layout_weight="1"
                     android:alpha=".7"
                     android:background="@drawable/toogle_switch"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:padding="5dp">
 
                     <LinearLayout
@@ -353,6 +366,8 @@
                     android:layout_weight="1"
                     android:alpha=".7"
                     android:background="@drawable/toogle_switch"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:padding="5dp">
 
                     <LinearLayout
