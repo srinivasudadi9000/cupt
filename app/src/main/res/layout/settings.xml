@@ -5,12 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/switch_thumb"
-    tools:context=".Settings">
 
+    tools:context=".Settings">
+   <include
+
+       layout="@layout/header"></include>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical">
 
         <ImageView
@@ -21,6 +24,7 @@
             android:src="@drawable/userprofile" />
 
         <TextView
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
@@ -31,21 +35,25 @@
             android:textSize="25dp" />
 
 
+
         <TextView
+            android:id="@+id/resetpassword_cv"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/border"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center"
-            android:id="@+id/resetpassword_cv"
             android:text="Reset Password"
             android:textColor="@color/black"
             android:textSize="18dp"
             android:textStyle="normal" />
 
         <TextView
+            android:id="@+id/changeno_txt"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="15dp"
@@ -60,11 +68,13 @@
             android:textSize="18dp"
             android:textStyle="normal" />
 
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
+            android:id="@+id/clearchat_id"
             android:layout_marginRight="15dp"
             android:background="@drawable/border"
             android:clickable="true"
@@ -77,12 +87,13 @@
 
 
         <TextView
-            android:background="@drawable/border"
+            android:id="@+id/delete_txt"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
+            android:background="@drawable/border"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center"

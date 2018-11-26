@@ -8,4 +8,10 @@
     <string name="checkedstate">START</string>
     <string name="uncheckedstate">STOP</string>
 
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+         <item>Others</item>
+    </string-array>
+
 </resources>

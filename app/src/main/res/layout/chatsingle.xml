@@ -7,6 +7,9 @@
     android:layout_height="75dp">
 
     <LinearLayout
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:id="@+id/chatsingle_ll"
         android:padding="3dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,10 +27,11 @@
             android:weightSum="2">
 
             <TextView
+                android:textColor="@color/black"
                 android:id="@+id/name_tv"
                 android:gravity="bottom"
                 android:layout_marginBottom="5dp"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 android:textSize="18dp"
                 android:text="Dadi srinivasu"
                 android:layout_width="match_parent"

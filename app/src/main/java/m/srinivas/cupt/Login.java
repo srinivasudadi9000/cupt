@@ -17,9 +17,10 @@ import android.widget.Toast;
 import java.net.URLEncoder;
 
 public class Login extends Activity implements View.OnClickListener {
-TextView signup_tv,forgot_password;
+    TextView signup_tv, forgot_password;
 
-Button sign_btn_call;
+    Button sign_btn_call;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,35 +37,33 @@ Button sign_btn_call;
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.forgot_password:
                 //openWhatsApp("7****");
 
-                   Intent whatsappIntent = new Intent(Intent.ACTION_SEND);
+                Intent whatsappIntent = new Intent(Intent.ACTION_SEND);
                 whatsappIntent.setType("text/plain");
                 whatsappIntent.setPackage("com.whatsapp");
                 whatsappIntent.putExtra(Intent.EXTRA_TEXT, "The text you wanted to share");
                 try {
                     startActivity(whatsappIntent);
                 } catch (android.content.ActivityNotFoundException ex) {
-                    Toast.makeText(Login.this,"Whatsapp have not been installed.",
+                    Toast.makeText(Login.this, "Whatsapp have not been installed.",
                             Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.signup_tv:
-                Intent signup_tv = new Intent(Login.this,Signup.class);
+                Intent signup_tv = new Intent(Login.this, Signup.class);
                 startActivity(signup_tv);
                 finish();
 
 
-
-
-               // openWhatsApp("+91 9948777449");
+                // openWhatsApp("+91 9948777449");
                 break;
 
             case R.id.sign_btn_call:
-                 //openWhatsApp("+91 7032224366");
-                Intent home = new Intent(Login.this,Home.class);
+                //openWhatsApp("+91 7032224366");
+                Intent home = new Intent(Login.this, Home.class);
                 startActivity(home);
                 break;
         }
@@ -72,20 +71,20 @@ Button sign_btn_call;
 
 
     private void openWhatsApp(String phone) {
-       String smsNumber = phone; // E164 format without '+' sign
-       /* */
+        String smsNumber = phone; // E164 format without '+' sign
+        /* */
 
         PackageManager packageManager = Login.this.getPackageManager();
         Intent i = new Intent(Intent.ACTION_VIEW);
 
         try {
-            String url = "https://api.whatsapp.com/send?phone="+ smsNumber +"&text=" + URLEncoder.encode("hello", "UTF-8");
+            String url = "https://api.whatsapp.com/send?phone=" + smsNumber + "&text=" + URLEncoder.encode("hello", "UTF-8");
             i.setPackage("com.whatsapp");
             i.setData(Uri.parse(url));
             if (i.resolveActivity(packageManager) != null) {
                 startActivity(i);
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
 
             Intent sendIntent = new Intent(Intent.ACTION_SEND);
@@ -94,7 +93,6 @@ Button sign_btn_call;
             sendIntent.putExtra("jid", smsNumber + "@s.whatsapp.net"); //phone number without "+" prefix
             sendIntent.setPackage("com.whatsapp");
             startActivity(sendIntent);
-
 
 
         }

@@ -100,6 +100,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/gallery_ll"
                     android:layout_width="100dp"
                     android:layout_height="110dp"
                     android:layout_marginLeft="8dp"
@@ -267,6 +268,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/share_ll"
                     android:layout_width="100dp"
                     android:layout_height="110dp"
                     android:layout_marginLeft="8dp"

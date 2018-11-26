@@ -17,6 +17,7 @@ public class Chathome extends Activity implements View.OnClickListener {
 
     ArrayList<Chat> chatArrayList;
     ChatAdapter chatAdapter;
+    LogAdapter logadapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +28,11 @@ public class Chathome extends Activity implements View.OnClickListener {
         chat_recyler.setLayoutManager(new LinearLayoutManager(this));
 
         chatArrayList = new ArrayList<Chat>();
-        chatArrayList.add(new Chat("Profilepic", "Dadi", "whatsup"));
-        chatArrayList.add(new Chat("Profilepic", "Dadi", "whatsup"));
-        chatArrayList.add(new Chat("Profilepic", "Dadi", "whatsup"));
-        chatArrayList.add(new Chat("Profilepic", "Dadi", "whatsup"));
-        chatArrayList.add(new Chat("Profilepic", "Dadi", "whatsup"));
+        chatArrayList.add(new Chat("Profilepic", "Dadi", "I am CPTU Chat"));
+        chatArrayList.add(new Chat("Profilepic", "Praveen", "I am CPTU Chat "));
+        chatArrayList.add(new Chat("Profilepic", "CPTU WARANGAL", "Wonders created by me"));
+        chatArrayList.add(new Chat("Profilepic", "CPTU KAKINADA", "something else"));
+        chatArrayList.add(new Chat("Profilepic", "CPTU SRIKAKULAM", "whatsup"));
 
 
         operator_tv = findViewById(R.id.operator_tv);
@@ -71,8 +72,8 @@ public class Chathome extends Activity implements View.OnClickListener {
                 operator_tv.setTextColor(getColor(R.color.black));
                 chat_tv.setTextColor(getColor(R.color.black));
 
-                chatAdapter = new ChatAdapter(chatArrayList, R.layout.logsingle, getApplicationContext());
-                chat_recyler.setAdapter(chatAdapter);
+                logadapter = new LogAdapter(chatArrayList, R.layout.logsingle, getApplicationContext());
+                chat_recyler.setAdapter(logadapter);
                 chatAdapter.notifyDataSetChanged();
                 break;
             case R.id.chat_tv:

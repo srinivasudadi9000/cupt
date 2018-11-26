@@ -18,14 +18,14 @@ import android.widget.Toast;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 
-public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.CheckIn> {
+public class LogAdapter extends RecyclerView.Adapter<LogAdapter.CheckIn> {
 
 
     ArrayList<Chat> chats;
     int Rowlayout;
     Context context;
 
-    public ChatAdapter(ArrayList<Chat> Chat, int check_single, Context applicationContext) {
+    public LogAdapter(ArrayList<Chat> Chat, int check_single, Context applicationContext) {
         this.context = applicationContext;
         this.Rowlayout = check_single;
         this.chats = Chat;
@@ -44,15 +44,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.CheckIn> {
     public void onBindViewHolder(@NonNull CheckIn holder, int position) {
         holder.name_tv.setText(chats.get(position).getName());
         holder.status_tv.setText(chats.get(position).getStatus());
-        holder.chatsingle_ll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openWhatsApp("+91 8885270193");
 
-            }
-        });
 
-       /* holder.logsingle_ll.setOnClickListener(new View.OnClickListener() {
+        holder.logsingle_ll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -61,14 +55,16 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.CheckIn> {
                 whatsappIntent.setPackage("com.whatsapp");
                 whatsappIntent.putExtra(Intent.EXTRA_TEXT, "The text you wanted to share");
                 try {
+                    whatsappIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(whatsappIntent);
+
                 } catch (android.content.ActivityNotFoundException ex) {
                     Toast.makeText(context, "Whatsapp have not been installed.",
                             Toast.LENGTH_SHORT).show();
                 }
 
             }
-        });*/
+        });
     }
 
     @Override
@@ -89,9 +85,10 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.CheckIn> {
             status_tv = (TextView) itemView.findViewById(R.id.status_tv);
 
 
+
             Animation animation;
-            animation = AnimationUtils.loadAnimation(context,R.anim.slideout);
-            chatsingle_ll.startAnimation(animation);
+            animation = AnimationUtils.loadAnimation(context,R.anim.slidein);
+            logsingle_ll.startAnimation(animation);
 
         }
     }

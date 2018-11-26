@@ -8,14 +8,12 @@
     tools:context=".Login"
     tools:layout_editor_absoluteY="81dp">
 
-    <include
-
-        layout="@layout/header"></include>
+    <include layout="@layout/header"></include>
 
     <android.support.v4.widget.NestedScrollView
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -32,15 +30,15 @@
                 android:src="@drawable/userprofile" />
 
             <TextView
-                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:gravity="center"
-                android:text="Reset Password"
+                android:text="Change Number"
                 android:textColor="@color/white"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:visibility="gone" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -54,7 +52,7 @@
                     android:id="@+id/aadhar_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Confirm Code"
+                    android:hint="Old Number"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white" />
             </android.support.design.widget.TextInputLayout>
@@ -72,7 +70,7 @@
                     android:id="@+id/password_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="New Password"
+                    android:hint="New Number"
                     android:inputType="textPassword"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white" />
@@ -90,7 +88,7 @@
                     android:id="@+id/confirm_pswd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Confirm Password"
+                    android:hint="OTP"
                     android:inputType="textPassword"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white" />
@@ -98,7 +96,7 @@
 
 
             <Button
-                android:id="@+id/sign_btn_call"
+                android:id="@+id/changeno_btn"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -109,7 +107,7 @@
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:gravity="center"
-                android:text="Reset Password"
+                android:text="Change Number"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
