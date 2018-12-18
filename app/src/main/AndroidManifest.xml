@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="m.srinivas.cupt">
+    package="m.srinivas.wcabs">
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -17,11 +18,12 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon_cptu"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon_cptu"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Splash">
@@ -33,12 +35,13 @@
         </activity>
         <activity android:name=".Login" />
         <activity android:name=".Signup" />
-        <activity android:name=".Home" />
+        <activity android:name=".Settings" />
         <activity android:name=".Prelogin" />
+        <activity android:name=".Home" />
+        <activity android:name=".Edit_profile" />
         <activity android:name=".ResetPassword" />
-        <activity android:name=".Chathome" />
-        <activity android:name=".Settings"></activity>
-        <activity android:name=".ChangeNumber"></activity>
+        <activity android:name=".OTP" />
+        <activity android:name=".ForgotPassword"></activity>
     </application>
 
 </manifest>

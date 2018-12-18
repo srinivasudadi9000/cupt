@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/switch_thumb"
     tools:context=".Login">
 
     <android.support.v4.widget.NestedScrollView
@@ -12,6 +11,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:background="@color/white"
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,61 +21,13 @@
                 android:layout_width="250dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="20dp"
                 android:padding="10dp"
                 android:src="@drawable/logo" />
 
+
             <LinearLayout
-                android:id="@+id/signup_ll"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="15dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <TextView
-                    android:id="@+id/user_tv"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="25dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/greenleftbutton"
-                    android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:gravity="center"
-                    android:paddingLeft="5dp"
-                    android:text="user"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/admin_tv"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="25dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/whiterightbutton"
-                    android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:gravity="center"
-                    android:paddingLeft="5dp"
-                    android:text="admin"
-                    android:textAllCaps="true"
-                    android:textColor="@color/black"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
@@ -84,7 +36,7 @@
                 android:background="@drawable/opacity">
 
                 <LinearLayout
-                     android:layout_width="match_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
@@ -93,27 +45,59 @@
                     android:orientation="vertical">
 
 
-                    <android.support.design.widget.TextInputLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="15dp"
-                        android:textColorHint="@color/white"
-                        app:boxBackgroundColor="@color/white">
+                        android:orientation="horizontal"
+                        android:weightSum="2">
 
-                        <EditText
-                            android:id="@+id/aadhar_et"
+                        <android.support.design.widget.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:backgroundTint="@android:color/black"
-                            android:ellipsize="start"
-                            android:hint="Your Name"
-                            android:textColor="@color/white"
-                            android:textColorHighlight="@color/white"
-                            android:textColorHint="@color/white"
-                            android:textColorLink="@color/white" />
-                    </android.support.design.widget.TextInputLayout>
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/black"
+                            app:boxBackgroundColor="@color/black">
+
+                            <EditText
+                                android:id="@+id/firstname_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@android:color/black"
+                                android:ellipsize="start"
+                                android:hint="First Name"
+                                android:textColor="@color/black"
+                                android:textColorHighlight="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textColorLink="@color/black" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/black"
+                            app:boxBackgroundColor="@color/black">
+
+                            <EditText
+                                android:id="@+id/lastname_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@android:color/black"
+                                android:ellipsize="start"
+                                android:hint="Last Name"
+                                android:textColor="@color/black"
+                                android:textColorHighlight="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textColorLink="@color/black" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
 
                     <android.support.design.widget.TextInputLayout
                         android:id="@+id/text_input_layout"
@@ -122,123 +106,62 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="15dp"
-                        android:textColorHint="@color/white">
+                        android:textColorHint="@color/black">
 
                         <EditText
-                            android:id="@+id/password_et"
+                            android:id="@+id/cpassword_et"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:backgroundTint="@android:color/black"
                             android:ellipsize="start"
-                            android:hint="Mobile Number"
-                            android:inputType="number"
-                            android:maxLength="10"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/driving_til"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="15dp"
-                        android:textColorHint="@color/white"
-                        android:visibility="gone">
-
-                        <EditText
-                            android:id="@+id/drivinglicence_et"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@android:color/black"
-                            android:ellipsize="start"
-                            android:hint="Driving Licence Number"
-                            android:inputType="text"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-                    </android.support.design.widget.TextInputLayout>
-
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="15dp"
-                        android:textColorHint="@color/white">
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@android:color/black"
-                            android:ellipsize="start"
-                            android:hint="Aadhar Number"
-                            android:inputType="number"
-                            android:maxLength="16"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="15dp"
-                        android:textColorHint="@color/white">
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@android:color/black"
-                            android:ellipsize="start"
-                            android:hint="Your Place"
-                            android:inputType="text"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/emailid_til"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="15dp"
-                        android:textColorHint="@color/white">
-
-                        <EditText
-                            android:id="@+id/emailid_et"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@android:color/black"
-                            android:ellipsize="start"
-                            android:hint="Your Email ID"
-                            android:inputType="textEmailAddress"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginBottom="20dp"
-                        android:textColorHint="@color/white">
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@android:color/black"
-                            android:ellipsize="start"
-                            android:hint="Password"
+                            android:hint="Create Password"
                             android:inputType="textPassword"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white" />
+                            android:maxLength="10"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black" />
                     </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:textColorHint="@color/black">
+
+                        <EditText
+                            android:id="@+id/repassword_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/black"
+                            android:ellipsize="start"
+                            android:hint="Confirm Password"
+                            android:inputType="textPassword"
+                            android:maxLength="10"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:textColorHint="@color/black">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/black"
+                            android:ellipsize="start"
+                            android:hint="Phone Number"
+                            android:inputType="phone"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black" />
+                    </android.support.design.widget.TextInputLayout>
+
 
                 </LinearLayout>
 
@@ -261,15 +184,38 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginBottom="50dp"
-                android:background="@drawable/redbutton"
+                android:background="@drawable/yellowbutton"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:gravity="center"
                 android:text="Sign Up"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="18dp" />
+            <LinearLayout
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="20dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:text="Already registered?"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/signin_tv"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Sign In"
+                    android:textColor="@color/yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
 
         </LinearLayout>
 

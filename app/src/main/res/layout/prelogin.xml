@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/switch_thumb"
+        android:background="@color/white"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -21,47 +21,47 @@
 
 
         <LinearLayout
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
             android:id="@+id/signup_ll"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="45dp"
             android:layout_marginRight="30dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="2">
 
             <TextView
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
                 android:id="@+id/sign_tv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/whiteleftbutton"
+                android:background="@drawable/blackleftbutton"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:gravity="center"
                 android:paddingLeft="5dp"
                 android:text="Sign In"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18dp"
                 android:textStyle="normal" />
 
             <TextView
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
                 android:id="@+id/signup_tv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/greenrightbutton"
+                android:background="@drawable/yellowrightbutton"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:gravity="center"
                 android:paddingLeft="5dp"
                 android:text="Sign Up"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="18dp"
                 android:textStyle="normal" />
         </LinearLayout>

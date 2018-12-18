@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">cupt</string>
+    <string name="app_name">Wcabs</string>
     <string name="login_hint">Mobile/Email/Aadhar no</string>
     <string name="password_hint">Password</string>
     <string name="forgotpassword">forgot password?</string>
@@ -11,7 +11,7 @@
     <string-array name="gender">
         <item>Male</item>
         <item>Female</item>
-         <item>Others</item>
+        <item>Others</item>
     </string-array>
 
 </resources>

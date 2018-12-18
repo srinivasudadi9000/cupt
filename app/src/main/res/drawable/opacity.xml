@@ -3,7 +3,7 @@
     android:padding="10dp"
     android:alpha=".1"
     android:shape="rectangle">
-    <solid android:color="#40000000" />
+    <solid android:color="#40FFFFFF" />
     <!-- this one is ths color of the Rounded Button -->
     <corners
         android:bottomLeftRadius="20dp"

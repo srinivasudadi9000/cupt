@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/switch_thumb"
     tools:context=".Splash">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/switch_thumb"
+        android:background="@color/white"
         android:gravity="center">
 
         <ImageView

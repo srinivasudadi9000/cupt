@@ -26,8 +26,8 @@
                 android:bottom="0dp">
                 <shape>
                      <gradient
-                        android:startColor="#ff0000"
-                        android:centerColor="#FF4500"
+                        android:startColor="#FF144F"
+                        android:centerColor="#FF144F"
                         android:endColor="#FFDD00"
                         android:angle="-90" />
                 </shape>

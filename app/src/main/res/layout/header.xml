@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:weightSum="2"
-    android:background="#FF000A"
+    android:background="@color/black"
     android:orientation="horizontal">
    <ImageView
+       android:padding="5dp"
        android:id="@+id/back_img"
        android:layout_weight="1.7"
        android:src="@drawable/back"
@@ -15,7 +16,7 @@
         android:paddingRight="35dp"
         android:textSize="25dp"
         android:id="@+id/header_txt"
-        android:gravity="center"
+        android:gravity="start|center"
         android:textColor="@color/white"
         android:layout_weight=".3"
         android:text="Header "
